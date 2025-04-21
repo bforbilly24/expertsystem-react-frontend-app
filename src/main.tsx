@@ -7,12 +7,11 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
+import '@/styles/global.css'
 import { useAuthStore } from '@/stores/authStore'
 import { handleServerError } from '@/utils/handle-server-error'
 import { toast } from '@/hooks/use-toast'
-import { ThemeProvider } from './context/theme-context'
-import './index.css'
-// Generated Routes
+import { ThemeProvider } from '@/context/theme-context'
 import { routeTree } from './routeTree.gen'
 
 const queryClient = new QueryClient({
@@ -54,11 +53,10 @@ const queryClient = new QueryClient({
         if (error.response?.status === 401) {
           toast({
             variant: 'destructive',
-            title: 'Session expired!',
+            title: 'Unauthorized access!',
           })
           useAuthStore.getState().auth.reset()
-          const redirect = `${router.history.location.href}`
-          router.navigate({ to: '/sign-in', search: { redirect } })
+          router.navigate({ to: '/401' }) // Redirect to /401 instead of /sign-in
         }
         if (error.response?.status === 500) {
           toast({
@@ -68,7 +66,11 @@ const queryClient = new QueryClient({
           router.navigate({ to: '/500' })
         }
         if (error.response?.status === 403) {
-          // router.navigate("/forbidden", { replace: true });
+          toast({
+            variant: 'destructive',
+            title: 'Forbidden access!',
+          })
+          router.navigate({ to: '/403' })
         }
       }
     },
