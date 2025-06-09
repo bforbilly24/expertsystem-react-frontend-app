@@ -2,11 +2,11 @@ const FOOTER_LINKS = {
   information: {
     title: 'Informasi',
     links: [
-      { label: 'Home', href: '/home' },
-    //   { label: 'Our Services', href: '#our-services' },
-    //   { label: 'About Us', href: '#about-us' },
-    //   { label: 'Our Partner', href: '#our-partner' },
-    //   { label: 'Contact Us', href: '#contact-us' },
+      // { label: 'Home', href: '/home' },
+      //   { label: 'Our Services', href: '#our-services' },
+      //   { label: 'About Us', href: '#about-us' },
+      //   { label: 'Our Partner', href: '#our-partner' },
+      //   { label: 'Contact Us', href: '#contact-us' },
     ],
   },
   connectWithUs: {
