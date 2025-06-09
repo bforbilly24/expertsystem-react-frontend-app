@@ -21,6 +21,7 @@ interface QuestionTableProps {
   currentPage: number
   perPage: number
   totalQuestions: number
+  questionRefs: React.MutableRefObject<(HTMLTableRowElement | null)[]>
 }
 
 const QuestionTable = React.memo(
@@ -31,6 +32,7 @@ const QuestionTable = React.memo(
     currentPage,
     perPage,
     totalQuestions,
+    questionRefs,
   }: QuestionTableProps) => {
     const columns = React.useMemo<ColumnDef<string>[]>(
       () => [
@@ -70,15 +72,24 @@ const QuestionTable = React.memo(
       <div>
         <Table>
           <TableBody>
-            {table.getRowModel().rows.map((row) => (
-              <TableRow key={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <TableCell key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))}
+            {table.getRowModel().rows.map((row, index) => {
+              const globalIndex = (currentPage - 1) * perPage + index
+              return (
+                <TableRow
+                  key={row.id}
+                  ref={(el) => (questionRefs.current[globalIndex] = el)} // Set ref untuk baris
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <TableCell key={cell.id}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </TableCell>
+                  ))}
+                </TableRow>
+              )
+            })}
           </TableBody>
         </Table>
       </div>
