@@ -33,7 +33,7 @@ export const useSubmitAnalysis = () => {
     onSuccess: (data: AnalysisResponse) => {
       toast({
         title: 'Success',
-        description: `Analysis complete! Result: ${data.hasil}` as ReactNode,
+        description: `Analisis selesai! Hasil: ${data.hasil}` as ReactNode,
         variant: 'default',
       })
     },
