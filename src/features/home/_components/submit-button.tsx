@@ -54,8 +54,8 @@ function SubmitButton({
       },
       onError: () => {
         toast({
-          title: 'Submission Failed',
-          description: 'Failed to submit answers. Please try again.',
+          title: 'Pengiriman Gagal',
+          description: 'Gagal mengirimkan jawaban. Silakan coba lagi.',
           variant: 'destructive',
         });
       },
