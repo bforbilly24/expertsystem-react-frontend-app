@@ -11,7 +11,8 @@
         "format:check": "prettier --check .",
         "format": "prettier --write .",
         "generate-routes": "tsr generate",
-        "knip": "knip"
+        "knip": "knip",
+        "postinstall": "npm rebuild"
     },
     "dependencies": {
         "@radix-ui/react-dialog": "^1.1.10",
@@ -26,12 +27,10 @@
         "@radix-ui/react-separator": "^1.1.1",
         "@radix-ui/react-slot": "^1.2.3",
         "@radix-ui/react-toast": "^1.2.4",
-        "@rollup/rollup-linux-x64-gnu": "^4.43.0",
         "@tabler/icons-react": "^3.26.0",
         "@tanstack/react-query": "^5.62.3",
-        "@tanstack/react-router": "^1.121.2",
+        "@tanstack/react-router": "^1.86.1",
         "@tanstack/react-table": "^8.20.5",
-        "@tanstack/router-generator": "^1.121.7",
         "add": "^2.0.6",
         "axios": "^1.7.9",
         "bunx": "^0.1.0",
@@ -44,7 +43,6 @@
         "motion": "^12.7.4",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
-        "rollup": "^4.43.0",
         "shadcn": "^2.4.1",
         "tailwind-merge": "^2.6.0",
         "tailwindcss-animate": "^1.0.7",
@@ -52,11 +50,13 @@
     },
     "devDependencies": {
         "@eslint/js": "^9.17.0",
+        "@rollup/rollup-linux-x64-gnu": "^4.0.0",
         "@tanstack/eslint-plugin-query": "^5.62.1",
         "@tanstack/react-query-devtools": "^5.62.3",
-        "@tanstack/router-cli": "^1.121.7",
-        "@tanstack/router-devtools": "^1.121.8",
-        "@tanstack/router-plugin": "^1.121.7",
+        "@tanstack/router-cli": "^1.86.1",
+        "@tanstack/router-devtools": "^1.86.1",
+        "@tanstack/router-plugin": "^1.86.1",
+        "@tanstack/router-generator": "^1.86.1",
         "@trivago/prettier-plugin-sort-imports": "^4.3.0",
         "@types/js-cookie": "^3.0.6",
         "@types/node": "^22.10.5",
@@ -72,9 +72,23 @@
         "postcss": "^8.4.49",
         "prettier": "^3.4.2",
         "prettier-plugin-tailwindcss": "^0.6.9",
+        "rollup": "^4.0.0",
         "tailwindcss": "^3.4.17",
         "typescript": "~5.6.2",
         "typescript-eslint": "^8.18.2",
         "vite": "^6.0.5"
+    },
+    "optionalDependencies": {
+        "@rollup/rollup-darwin-arm64": "^4.0.0",
+        "@rollup/rollup-darwin-x64": "^4.0.0",
+        "@rollup/rollup-linux-arm-gnueabihf": "^4.0.0",
+        "@rollup/rollup-linux-arm64-gnu": "^4.0.0",
+        "@rollup/rollup-linux-arm64-musl": "^4.0.0",
+        "@rollup/rollup-linux-riscv64-gnu": "^4.0.0",
+        "@rollup/rollup-linux-x64-gnu": "^4.0.0",
+        "@rollup/rollup-linux-x64-musl": "^4.0.0",
+        "@rollup/rollup-win32-arm64-msvc": "^4.0.0",
+        "@rollup/rollup-win32-ia32-msvc": "^4.0.0",
+        "@rollup/rollup-win32-x64-msvc": "^4.0.0"
     }
 }
