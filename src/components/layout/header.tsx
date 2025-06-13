@@ -1,6 +1,5 @@
 import React from 'react'
 import { cn } from '@/lib/cn'
-import { Separator } from '@/components/ui/shadcn/separator'
 
 interface HeaderProps extends React.HTMLAttributes<HTMLElement> {
   fixed?: boolean
