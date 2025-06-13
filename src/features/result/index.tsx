@@ -2,10 +2,11 @@ import { useLocation } from '@tanstack/react-router'
 import AnimationContainer from '@/components/global/animation-container'
 import MaxWidthWrapper from '@/components/global/max-width-wrapper'
 import { Main } from '@/components/layout/main'
+import ResultInfo from './_components/result_info'
 
 export default function Result() {
   const { state } = useLocation()
-  const result = state?.result || 'No result available'
+  const result = state?.result ?? 'No result available'
 
   return (
     <AnimationContainer>
@@ -19,11 +20,13 @@ export default function Result() {
               Partisipasi dalam ujian minat dan bakat yang telah anda
               selesaikan!
             </h6>
+            <p className='mt-8 text-2xl'>
+              <span className='text-3xl font-medium'>Selamat!</span> Kami telah
+              menemukan peran yang paling cocok untukmu.
+            </p>
           </div>
 
-          <div className='flex flex-col items-center justify-center w-full mt-20'>
-            <h1 className='text-4xl font-semibold'>{result}</h1>
-          </div>
+          <ResultInfo role={result} />
         </Main>
       </MaxWidthWrapper>
     </AnimationContainer>

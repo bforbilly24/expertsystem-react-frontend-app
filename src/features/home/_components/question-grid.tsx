@@ -38,7 +38,7 @@ const QuestionGrid = React.memo(
           </CardHeader>
           <CardContent>
             <ScrollArea className='h-[300px] w-full'>
-              <div className='grid grid-cols-5 gap-2'>
+              <div className='grid grid-cols-5 gap-2 p-1'>
                 {questions.map((num, index) => {
                   const isAnswered = answers[index] !== -1
                   const isCurrent = index === activeQuestionIndex // Use activeQuestionIndex
