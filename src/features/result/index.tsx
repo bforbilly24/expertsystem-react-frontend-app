@@ -1,8 +1,16 @@
-import { useLocation } from '@tanstack/react-router'
+import { useLocation, Link } from '@tanstack/react-router'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from '@/components/ui/shadcn/breadcrumb'
 import AnimationContainer from '@/components/global/animation-container'
 import MaxWidthWrapper from '@/components/global/max-width-wrapper'
 import { Main } from '@/components/layout/main'
 import ResultInfo from './_components/result_info'
+import { SlashIcon } from 'lucide-react'
 
 export default function Result() {
   const { state } = useLocation()
@@ -12,6 +20,19 @@ export default function Result() {
     <AnimationContainer>
       <MaxWidthWrapper>
         <Main className='pt-32 pb-24 flex flex-col gap-y-4'>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <Link to='/'>
+                  <BreadcrumbLink>Home</BreadcrumbLink>
+                </Link>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator>
+                <SlashIcon />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem>Result</BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <div className='flex flex-col gap-y-2 items-start justify-center'>
             <h1 className='text-3xl capitalize font-semibold text-orange-500'>
               Hasil Minat Bakat
