@@ -1,6 +1,6 @@
 import path from 'path'
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 
 // https://vite.dev/config/
@@ -16,27 +16,33 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@tabler/icons-react': '@tabler/icons-react/dist/esm/icons/index.mjs',
     },
   },
   build: {
     rollupOptions: {
-      // Force use of JS version instead of native binary
-      external: [],
       output: {
-        manualChunks: undefined,
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['@tanstack/react-router'],
+          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-select']
+        },
       },
     },
-    // Disable native optimizations that might cause issues
-    commonjsOptions: {
-      transformMixedEsModules: true,
-    },
+    target: 'esnext',
+    minify: 'esbuild',
   },
   optimizeDeps: {
-    include: ['@tanstack/react-router', '@tanstack/react-query'],
+    include: [
+      '@tanstack/react-router', 
+      '@tanstack/react-query',
+      'react',
+      'react-dom'
+    ],
   },
-  // Add esbuild fallback configuration
-  esbuild: {
-    target: 'node14',
+  server: {
+    port: 3000,
   },
+  preview: {
+    port: 4173,
+  }
 })
