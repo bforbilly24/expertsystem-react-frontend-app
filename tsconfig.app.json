@@ -15,7 +15,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    /* Alias */
+    /* TAMBAHKAN INI - Path Alias */
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
