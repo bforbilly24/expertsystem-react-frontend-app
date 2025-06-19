@@ -166,10 +166,10 @@ function Questions() {
               {data.soal.length === 0 ? (
                 <Alert variant='destructive'>
                   <AlertCircle className='h-4 w-4' />
-                  <AlertTitle>No Questions Found</AlertTitle>
+                  <AlertTitle>Tidak ada pertanyaan yang tersedia</AlertTitle>
                   <AlertDescription>
-                    No questions are available for this page. Please try another
-                    page or contact support.
+                    Tidak ada pertanyaan yang tersedia untuk halaman ini.
+                    Silakan coba halaman lain atau hubungi dukungan.
                   </AlertDescription>
                 </Alert>
               ) : (
