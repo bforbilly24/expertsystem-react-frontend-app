@@ -12,7 +12,7 @@ const ProgressBar = React.memo(({ answered, total }: ProgressBarProps) => {
   return (
     <div
       className="mt-4"
-      aria-label={`Progress: ${answered} dari ${total} pertanyaan terjawab`}
+      aria-label={`Progress: ${answered} dari ${total} test terjawab`}
     >
       <Progress value={percentage} className="w-full bg-green-500/20" />
     </div>

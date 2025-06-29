@@ -18,7 +18,7 @@ const QuestionRow = React.memo(
     return (
       <div className="w-full flex flex-col items-start">
         <p className="font-semibold text-lg mb-2">
-          Pertanyaan No. {globalIndex + 1}
+          Test No. {globalIndex + 1}
         </p>
         <p className="text-base text-foreground mb-4">{question}</p>
         <AnswerRadioGroup

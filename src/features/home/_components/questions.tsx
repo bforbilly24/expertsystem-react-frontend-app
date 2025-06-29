@@ -166,10 +166,10 @@ function Questions() {
               {data.soal.length === 0 ? (
                 <Alert variant='destructive'>
                   <AlertCircle className='h-4 w-4' />
-                  <AlertTitle>Tidak ada pertanyaan yang tersedia</AlertTitle>
+                  <AlertTitle>Tidak ada test yang tersedia</AlertTitle>
                   <AlertDescription>
-                    Tidak ada pertanyaan yang tersedia untuk halaman ini.
-                    Silakan coba halaman lain atau hubungi dukungan.
+                    Tidak ada test yang tersedia untuk halaman ini. Silakan coba
+                    halaman lain atau hubungi dukungan.
                   </AlertDescription>
                 </Alert>
               ) : (
@@ -212,8 +212,6 @@ function Questions() {
         <QuestionGrid
           totalQuestions={totalQuestions}
           answers={answers}
-          currentPage={currentPage}
-          perPage={perPage}
           activeQuestionIndex={activeQuestionIndex}
           onQuestionClick={handleQuestionClick}
         />

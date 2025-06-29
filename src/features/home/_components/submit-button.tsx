@@ -30,8 +30,8 @@ function SubmitButton({
   const handleSubmit = () => {
     if (answers.length !== totalQuestions || answers.includes(-1)) {
       toast({
-        title: 'Belum Terselesaikan Semua Pertanyaan',
-        description: `Anda harus menjawab semua ${totalQuestions} pertanyaan.`,
+        title: 'Belum Terselesaikan Semua Test',
+        description: `Anda harus menjawab semua ${totalQuestions} test.`,
         variant: 'destructive',
       });
       return;

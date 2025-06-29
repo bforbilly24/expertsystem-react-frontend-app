@@ -11,9 +11,7 @@ import { ScrollArea } from '@/components/ui/shadcn/scroll-area'
 interface QuestionGridProps {
   totalQuestions: number
   answers: number[]
-  currentPage: number
-  perPage: number
-  activeQuestionIndex: number // New prop
+  activeQuestionIndex: number
   onQuestionClick: (questionIndex: number) => void
 }
 
@@ -33,7 +31,7 @@ const QuestionGrid = React.memo(
         <Card className='w-full h-fit shadow-md'>
           <CardHeader className='pb-2'>
             <CardTitle className='text-base font-semibold text-foreground'>
-              Nomor Pertanyaan
+              Nomor Test
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -75,7 +73,7 @@ const QuestionGrid = React.memo(
         </Card>
 
         <div className='flex text-sm text-muted-foreground'>
-          {answeredCount} dari {totalQuestions} pertanyaan terjawab.
+          {answeredCount} dari {totalQuestions} test terjawab.
         </div>
       </div>
     )
