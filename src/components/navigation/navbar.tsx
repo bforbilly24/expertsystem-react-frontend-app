@@ -52,10 +52,10 @@ const Navbar = () => {
         <AnimationContainer reverse delay={0.1} className='size-full'>
           <MaxWidthWrapper className='flex items-center justify-between'>
             <a href='/' className='items-center lg:items-start'>
-              <div className='aspect-[115/39] h-[2.438rem] w-44 lg:aspect-[271/78] lg:h-[4rem] lg:w-[16rem]'>
+              <div className='aspect-[115/39] size-8 lg:aspect-[271/78] lg:size-16'>
                 <img
                   loading='lazy'
-                  src='/brand/logo.webp'
+                  src='/brand/web-app-manifest-512x512.png'
                   alt='Tes Minat Bakat Logo'
                   className='h-full w-full object-contain'
                 />

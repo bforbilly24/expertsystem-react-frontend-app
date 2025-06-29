@@ -2,6 +2,7 @@ import { FooterLinkBase, FooterLinkWithIcon } from '@/types/footer'
 import { FOOTER_LINKS } from '@/constants/footer-link'
 import { TextHoverEffect } from '@/components/ui/aceternityui/text-hover-effect'
 import MaxWidthWrapper from '@/components/global/max-width-wrapper'
+import { Link } from '@tanstack/react-router'
 
 const Footer = () => {
   const hasIcon = (link: FooterLinkBase): link is FooterLinkWithIcon => {
@@ -17,16 +18,16 @@ const Footer = () => {
 
             <div className='grid w-full gap-8 xl:grid-cols-3 xl:gap-8'>
               <div className='flex flex-col items-start justify-start md:max-w-[300px]'>
-                <a href='/' className='items-center lg:items-start'>
-                  <div className='aspect-[271/78] w-40 lg:w-52'>
+                <Link to='/' className='items-center lg:items-start'>
+                  <div className='aspect-[115/39] size-8 lg:aspect-[271/78] lg:size-16'>
                     <img
                       loading='lazy'
-                      src='/brand/logo.webp'
+                      src='/brand/web-app-manifest-512x512.png'
                       alt='Tes Minat Bakat Logo'
                       className='h-full w-full object-contain'
                     />
                   </div>
-                </a>
+                </Link>
                 <p className='mt-4 text-start text-sm text-muted-foreground'>
                   Tes Minat Bakat by Eduskill membantu Anda menemukan karier
                   yang sesuai dengan minat dan bakat unik Anda melalui tes yang
@@ -88,23 +89,23 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="mt-8 w-full border-t border-border/40 pt-4 md:flex md:items-center md:justify-between md:pt-8">
-              <p className="mt-4 flex items-center text-sm text-muted-foreground">
+            <div className='mt-8 w-full border-t border-border/40 pt-4 md:flex md:items-center md:justify-between md:pt-8'>
+              <p className='mt-4 flex items-center text-sm text-muted-foreground'>
                 Powered by{' '}
                 <a
-                  href="https://eduskill.id/"
-                  className="ml-1 font-semibold text-foreground hover:text-primary"
+                  href='https://eduskill.id/'
+                  className='ml-1 font-semibold text-foreground hover:text-primary'
                 >
                   Eduskill.id
                 </a>
               </p>
-              <p className="mt-8 text-sm text-muted-foreground md:mt-0">
+              <p className='mt-8 text-sm text-muted-foreground md:mt-0'>
                 © {new Date().getFullYear()} Eduskill.id. All rights reserved.
               </p>
             </div>
 
-            <div className="hidden h-[10rem] w-full items-center justify-center lg:flex lg:h-[10rem]">
-              <TextHoverEffect text="EDUSKILL" />
+            <div className='hidden h-[10rem] w-full items-center justify-center lg:flex lg:h-[10rem]'>
+              <TextHoverEffect text='EDUSKILL' />
             </div>
           </div>
         </div>

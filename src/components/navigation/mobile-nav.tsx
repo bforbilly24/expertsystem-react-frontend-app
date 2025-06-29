@@ -29,7 +29,7 @@ const MobileNav: React.FC<MobileNavProps> = ({
               <div className='aspect-[115/39] h-[2.438rem] w-44'>
                 <img
                   loading='lazy'
-                  src='/brand/logo.webp'
+                  src='/brand/web-app-manifest-512x512.png'
                   alt='Tes Minat Bakat Logo'
                   className='h-full w-full object-contain'
                 />
