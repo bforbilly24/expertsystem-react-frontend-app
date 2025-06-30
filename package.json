@@ -31,6 +31,7 @@
     "@tanstack/react-router": "^1.86.1",
     "@tanstack/react-table": "^8.20.5",
     "axios": "^1.7.9",
+    "caniuse-lite": "^1.0.30001726",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.7.4",
