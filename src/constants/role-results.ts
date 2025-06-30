@@ -12,6 +12,7 @@ const ROLE_RESULTS = {
       'Berkolaborasi erat dengan stakeholder dan tim pengembang.',
       'Memastikan produk yang dikembangkan memenuhi kebutuhan pasar.',
     ],
+    tools: ['Figma', 'Jira', 'Trello', 'Miro', 'Notion', 'Google Analytics'],
     courses: [
       {
         title: 'Merancang Roadmap Produk dengan Metode Agile',
@@ -60,6 +61,14 @@ const ROLE_RESULTS = {
       'Membuat wireframe, prototipe, dan desain antarmuka (UI) yang menarik.',
       'Merancang alur pengguna (user flow) yang logis dan mulus.',
       'Melakukan uji kegunaan (usability testing) untuk menyempurnakan desain.',
+    ],
+    tools: [
+      'Figma',
+      'Adobe XD',
+      'Sketch',
+      'InVision',
+      'Balsamiq',
+      'UserTesting',
     ],
     courses: [
       {
@@ -113,6 +122,7 @@ const ROLE_RESULTS = {
       'Bekerja sama dengan desainer UI/UX untuk menerapkan desain visual.',
       'Mengoptimalkan aplikasi untuk kecepatan dan skalabilitas maksimum.',
     ],
+    tools: ['Remix', 'Next.js', 'React', 'Angular', 'TailwindCSS', 'Webpack'],
     courses: [
       {
         title: 'Membuat Website Interaktif dengan React.js',
@@ -162,6 +172,7 @@ const ROLE_RESULTS = {
       'Menulis kode sisi server dengan bahasa seperti Python, Java, atau Node.js.',
       'Memastikan keamanan dan integritas data pengguna.',
     ],
+    tools: ['Node.js', 'Express', 'Django', 'Flask', 'PostgreSQL', 'MongoDB'],
     courses: [
       {
         title: 'Membangun API dengan Node.js dan Express',
@@ -211,6 +222,7 @@ const ROLE_RESULTS = {
       'Membuat visualisasi data untuk menyajikan temuan secara efektif.',
       'Menyampaikan wawasan dan rekomendasi kepada para pemangku kepentingan.',
     ],
+    tools: ['Python', 'R', 'TensorFlow', 'PyTorch', 'Tableau', 'Pandas'],
     courses: [
       {
         title: 'Menganalisis Data dengan Python dan Pandas',
