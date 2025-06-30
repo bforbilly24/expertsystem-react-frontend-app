@@ -26,23 +26,38 @@ export default function ResultInfo({ role }: { role: Role }) {
           <CardDescription className='text-base'>{role.about}</CardDescription>
         </CardHeader>
 
-        <CardContent>
-          <p className='text-xl font-medium mb-2'>Tanggung Jawab Utama:</p>
-          <div className='text-muted-foreground space-y-2 pl-2'>
-            {role.responsibilities.length > 0 ? (
-              <ul className='list-none space-y-2'>
-                {role.responsibilities.map((responsibility) => (
-                  <li
-                    key={responsibility}
-                    className='flex items-start space-x-2'
-                    dangerouslySetInnerHTML={{ __html: `✅ ${responsibility}` }}
-                  />
-                ))}
-              </ul>
-            ) : (
-              <p>Tidak ada tanggung jawab yang tersedia.</p>
-            )}
+        <CardContent className='space-y-6'>
+          <div>
+            <p className='text-xl font-medium mb-2'>Tanggung Jawab Utama:</p>
+            <div className='text-muted-foreground space-y-2 pl-2'>
+              {role.responsibilities.length > 0 ? (
+                <ul className='list-none space-y-2'>
+                  {role.responsibilities.map((responsibility) => (
+                    <li
+                      key={responsibility}
+                      className='flex items-start space-x-2'
+                      dangerouslySetInnerHTML={{ __html: `✅ ${responsibility}` }}
+                    />
+                  ))}
+                </ul>
+              ) : (
+                <p>Tidak ada tanggung jawab yang tersedia.</p>
+              )}
+            </div>
           </div>
+          
+          {role.tools && role.tools.length > 0 && (
+            <div>
+              <p className='text-xl font-medium mb-2'>Tools yang Digunakan:</p>
+              <div className='flex flex-wrap gap-2'>
+                {role.tools.map((tool) => (
+                  <span key={tool} className='bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm'>
+                    {tool}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
     </>
