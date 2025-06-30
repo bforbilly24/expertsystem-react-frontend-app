@@ -1,6 +1,5 @@
 import { Course } from '@/types/results'
 import { ArrowUpRightIcon } from 'lucide-react'
-// import { Badge } from '@/components/ui/shadcn/badge'
 import { Button } from '@/components/ui/shadcn/button'
 import { Card, CardContent } from '@/components/ui/shadcn/card'
 import { Rating, RatingButton } from '@/components/ui/shadcn/rating'
@@ -20,19 +19,6 @@ export function RecommendationCard({ courses = [] }: RecommendationCardProps) {
     return formattedPrice.replace(/\s/g, '')
   }
 
-//   const getLevelColor = (level: string) => {
-//     switch (level) {
-//       case 'Pemula':
-//         return 'bg-green-600'
-//       case 'Menengah':
-//         return 'bg-yellow-500'
-//       case 'Sulit':
-//         return 'bg-red-600'
-//       default:
-//         return 'bg-gray-600'
-//     }
-//   }
-
   return (
     <div className='grid grid-cols-1 grid-rows-3 gap-4 mt-4 md:grid-cols-3 md:grid-rows-1'>
       {courses.length === 0 && (
@@ -46,13 +32,6 @@ export function RecommendationCard({ courses = [] }: RecommendationCardProps) {
               alt={course.title}
               className='w-full h-full object-cover object-top'
             />
-            {/* <div className='absolute bottom-3 left-3'>
-              <Badge
-                className={`text-white ${getLevelColor(course.level)} bg-opacity-75 p-2`}
-              >
-                {course.level}
-              </Badge>
-            </div> */}
           </div>
           <CardContent className='mt-2'>
             <div className='space-y-4'>
