@@ -15,6 +15,7 @@ interface Role {
   description: string
   about: string
   responsibilities: string[]
+  tools: string[]
   courses: Course[]
 }
 
